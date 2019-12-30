@@ -3,12 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker/services/auth.dart';
+import 'package:time_tracker/views/sign_in/email_sign_in_model.dart';
 import 'package:time_tracker/views/sign_in/validated.dart';
 import 'package:time_tracker/widgets/platform_exception_alert_dialog.dart';
 
-enum EmailSignInFormType { signIn, register }
 
-class EmailSignInForm extends StatefulWidget with EmailAndPasswordValidators {
+
+class EmailSignInFormStateful extends StatefulWidget with EmailAndPasswordValidators {
   @override
   _EmailSignInFormState createState() => _EmailSignInFormState();
 }
@@ -22,7 +23,6 @@ class _EmailSignInFormState extends State<EmailSignInForm> {
   String get _email => _emailController.text;
   String get _password => _passwordController.text;
   EmailSignInFormType _formType = EmailSignInFormType.signIn;
-
   bool _submitted = false;
   bool _isLoading = false;
 
@@ -35,7 +35,7 @@ class _EmailSignInFormState extends State<EmailSignInForm> {
     super.dispose();
   }
 
-  void _submit() async {
+  Future<void> _submit() async {
     setState(() {
       _submitted = true;
       _isLoading = true;

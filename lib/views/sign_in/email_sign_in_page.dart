@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:time_tracker/views/sign_in/email_sign_in_form.dart';
+// import 'package:time_tracker/views/sign_in/email_sign_in_form.dart';
+import 'package:time_tracker/views/sign_in/email_sign_in_form_bloc_based.dart';
 
 class EmailSignInPage extends StatelessWidget {
 
@@ -19,7 +20,7 @@ class EmailSignInPage extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
-            child: EmailSignInForm(),
+            child: EmailSignInFormBlocBased.create(context),
           ),
         ),
       ),
