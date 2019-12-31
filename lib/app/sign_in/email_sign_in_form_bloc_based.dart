@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:time_tracker/app/sign_in/email_sign_in_bloc.dart';
+import 'package:time_tracker/app/sign_in/email_sign_in_model.dart';
 import 'package:time_tracker/services/auth.dart';
-import 'package:time_tracker/views/sign_in/email_sign_in_bloc.dart';
-import 'package:time_tracker/views/sign_in/email_sign_in_model.dart';
 import 'package:time_tracker/widgets/platform_exception_alert_dialog.dart';
 
 class EmailSignInFormBlocBased extends StatefulWidget {

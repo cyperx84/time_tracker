@@ -1,4 +1,4 @@
-import 'package:time_tracker/views/sign_in/validated.dart';
+import 'package:time_tracker/app/sign_in/validated.dart';
 
 enum EmailSignInFormType { signIn, register }
 
@@ -43,6 +43,8 @@ class EmailSignInModel with EmailAndPasswordValidators {
     bool showErrorText = submitted && !passwordValidator.isValid(password);
     return showErrorText ? invalidPasswordErrorText : null;
   }
+
+  get emailValidator => null;
 
   EmailSignInModel copyWith({
     String email,

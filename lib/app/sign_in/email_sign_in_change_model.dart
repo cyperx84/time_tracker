@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:time_tracker/app/sign_in/validated.dart';
 import 'package:time_tracker/services/auth.dart';
-import 'package:time_tracker/views/sign_in/validated.dart';
 
 import 'email_sign_in_model.dart';
 
