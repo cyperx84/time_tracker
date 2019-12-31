@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:time_tracker/services/auth.dart';
 import 'package:time_tracker/widgets/platform_alert_dialog.dart';
 
-class HomePage extends StatelessWidget {
+class JobsPage extends StatelessWidget {
   Future<void> _signOut(BuildContext context) async {
     try {
       final auth = Provider.of<AuthBase>(context);
