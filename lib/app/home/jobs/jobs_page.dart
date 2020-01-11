@@ -39,9 +39,9 @@ class JobsPage extends StatelessWidget {
       await database.deleteJob(job);
     } on PlatformException catch (e) {
       PlatformExceptionAlertDialog(
-          title: 'Operation failed',
-          exception: e,
-        ).show(context);
+        title: 'Operation failed',
+        exception: e,
+      ).show(context);
     }
   }
 
@@ -91,9 +91,7 @@ class JobsPage extends StatelessWidget {
         return ListItemBuilder<Job>(
             snapshot: snapshot,
             itemBuilder: (context, job) => Dismissible(
-                  background: Container(
-                    color: Colors.red,
-                  ),
+                  background: Container(color: Colors.red),
                   direction: DismissDirection.endToStart,
                   onDismissed: (direction) => _delete(context, job),
                   key: Key('job-0${job.id}'),
